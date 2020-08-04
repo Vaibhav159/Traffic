@@ -1,5 +1,6 @@
 package com.geektrust.traffic.service;
 
+import com.geektrust.traffic.model.IdealVehicleOnOrbit;
 import com.geektrust.traffic.season.Rainy;
 import com.geektrust.traffic.season.Sunny;
 import com.geektrust.traffic.season.Weather;
@@ -7,15 +8,15 @@ import com.geektrust.traffic.season.Windy;
 import com.geektrust.traffic.tracks.Orbit;
 import com.geektrust.traffic.tracks.Orbit1;
 import com.geektrust.traffic.tracks.Orbit2;
-import com.geektrust.traffic.transport.Vehicle;
+import com.geektrust.traffic.util.BestVehicle;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class VehicleInOrbitImpl implements VehicleInOrbit {
-  private List<Weather> weathers;
-  private List<Orbit> orbits;
+  private List<Weather> weathers = new ArrayList<>();
+  private List<Orbit> orbits = new ArrayList<>();
   private Weather currentSeason;
-
 
   public VehicleInOrbitImpl() {
     weathers.add(new Rainy());
@@ -25,18 +26,14 @@ public class VehicleInOrbitImpl implements VehicleInOrbit {
     orbits.add(new Orbit2());
   }
 
-  public void getBestVehicle(String weather, int maxSpeedAtOrbit1, int maxSpeedAtOrbit2) {
+  public IdealVehicleOnOrbit getBestVehicle(String weather, int maxSpeedAtOrbit1, int maxSpeedAtOrbit2) {
     setCurrentWeather(weather);
     updateCratersForEachOrbit();
-    setMaxSpeedForEachVehicle(maxSpeedAtOrbit1);
-    setMaxSpeedForEachVehicle(maxSpeedAtOrbit2);
+    orbits.get(0).setAllowedOrbitSpeed(maxSpeedAtOrbit1);
+    orbits.get(1).setAllowedOrbitSpeed(maxSpeedAtOrbit2);
+    return (new BestVehicle().requiredVehicleToBeUsed(orbits, currentSeason.getVehicleAllowed()));
   }
 
-  private void setMaxSpeedForEachVehicle(int maxSpeedAtOrbit) {
-    for(Vehicle vehicle : currentSeason.getVehicleAllowed()) {
-      vehicle.bestSpeed(maxSpeedAtOrbit);
-    }
-  }
 
   private void updateCratersForEachOrbit() {
     for(Orbit orbit : orbits) {

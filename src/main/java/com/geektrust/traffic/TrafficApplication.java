@@ -1,5 +1,9 @@
 package com.geektrust.traffic;
 
+import com.geektrust.traffic.model.IdealVehicleOnOrbit;
+import com.geektrust.traffic.service.VehicleInOrbit;
+import com.geektrust.traffic.service.VehicleInOrbitImpl;
+
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -16,7 +20,7 @@ public class TrafficApplication {
       trafficApplication.getResult(args[0]);
     }
     catch (IOException e) {
-      System.out.println("ERROR" + e.getMessage());
+      System.out.println("ERROR :" + e.getMessage());
       e.printStackTrace();
     }
 
@@ -24,7 +28,6 @@ public class TrafficApplication {
 
   private void getResult(String filepath) throws IOException {
     populateValues(filepath);
-    System.out.println(weather + maxSpeedAtOrbit1 + maxSpeedAtOrbit2);
   }
 
   private void populateValues(String filepath) throws IOException {
@@ -36,5 +39,11 @@ public class TrafficApplication {
       maxSpeedAtOrbit1 = scanner.nextInt();
       maxSpeedAtOrbit2 = scanner.nextInt();
     }
+    VehicleInOrbit vehicleInOrbit = new VehicleInOrbitImpl();
+    IdealVehicleOnOrbit idealVehicleOnOrbit = vehicleInOrbit
+        .getBestVehicle(weather, maxSpeedAtOrbit1, maxSpeedAtOrbit2);
+
+    String ans = idealVehicleOnOrbit.toString();
+    System.out.println(ans);
   }
 }

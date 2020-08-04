@@ -1,6 +1,10 @@
 package com.geektrust.traffic.transport;
 
 public interface Vehicle {
-  void bestSpeed(int speedAllowed);
-  boolean canTravel(String weather);
+
+  double getTimePerCrater();
+
+  String getVehicleName();
+
+  double bestSpeed(double speedAllowed);
 }

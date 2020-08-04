@@ -1,29 +1,36 @@
 package com.geektrust.traffic.transport;
 
+import lombok.Data;
+
 import java.util.Set;
 
 public class Bike implements Vehicle{
-  private int maxSpeed;
-  private int timePerCrater;
-  private Set<String> weatherRequired;
+  private String vehicleName;
+  private double maxSpeed;
+
+  private double timePerCrater;
 
   public Bike() {
+    vehicleName = "BIKE";
     maxSpeed = 10;
     timePerCrater = 2;
-    weatherRequired.add("WINDY");
-    weatherRequired.add("SUNNY");
   }
 
   @Override
-  public void bestSpeed(int speedAllowed) {
-    maxSpeed = Math.min(maxSpeed, speedAllowed);
+  public double getTimePerCrater() {
+    return timePerCrater;
   }
 
   @Override
-  public boolean canTravel(String weather) {
-    if (weatherRequired.contains(weather))
-      return true;
-    return false;
+  public String getVehicleName() {
+    return vehicleName;
   }
+
+  @Override
+  public double bestSpeed(double speedAllowed) {
+    return Math.min(maxSpeed, speedAllowed);
+  }
+
+
 
 }
