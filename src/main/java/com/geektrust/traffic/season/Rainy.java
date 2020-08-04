@@ -1,16 +1,30 @@
 package com.geektrust.traffic.season;
 
-import java.util.Set;
+import com.geektrust.traffic.transport.Car;
+import com.geektrust.traffic.transport.Tuktuk;
+import com.geektrust.traffic.transport.Vehicle;
+
+import java.util.List;
 
 public class Rainy implements Weather {
-
+  private String name;
   private int craterAffectedInPercentage;
-  private Set<String> vehicleAllowed;
+  private List<Vehicle> vehicleAllowed;
+
+  @Override
+  public String getName() {
+    return name;
+  }
+
+  @Override
+  public List<Vehicle> getVehicleAllowed() {
+    return vehicleAllowed;
+  }
 
   public Rainy() {
     craterAffectedInPercentage = 20;
-    vehicleAllowed.add("CAR");
-    vehicleAllowed.add("TUKTUK");
+    vehicleAllowed.add(new Car());
+    vehicleAllowed.add(new Tuktuk());
   }
 
   @Override

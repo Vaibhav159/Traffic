@@ -1,8 +1,13 @@
 package com.geektrust.traffic.tracks;
 
+import com.geektrust.traffic.season.Weather;
+
+import java.util.List;
+
 public class Orbit1 implements Orbit{
   private int distanceFromDestination;
   private int noOfCraters;
+  private List<Weather> weathers;
 
   public Orbit1() {
     distanceFromDestination = 18;
@@ -14,6 +19,7 @@ public class Orbit1 implements Orbit{
   }
 
   @Override
-  public void updateCraters(String weather) {
+  public void updateCraters(Weather weather) {
+    noOfCraters = weather.updateCraters(noOfCraters);
   }
 }
