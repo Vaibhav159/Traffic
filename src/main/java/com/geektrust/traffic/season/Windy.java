@@ -8,16 +8,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Windy implements Weather{
-  private String name;
-  private int craterAffectedInPercentage;
-  private List<Vehicle> vehicleAllowed = new ArrayList<>();
+  private final String name;
+  private final int craterAffectedInPercentage;
+  private final List<Vehicle> vehicleAllowed = new ArrayList<>();
 
   public List<Vehicle> getVehicleAllowed() {
     return vehicleAllowed;
   }
 
   @Override
-  public String getName() {
+  public String getWeatherName() {
     return name;
   }
 

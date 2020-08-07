@@ -28,6 +28,12 @@ public class TrafficApplication {
 
   private void getResult(String filepath) throws IOException {
     populateValues(filepath);
+    VehicleInOrbit vehicleInOrbit = new VehicleInOrbitImpl();
+    IdealVehicleOnOrbit idealVehicleOnOrbit = vehicleInOrbit
+        .getBestVehicle(weather, maxSpeedAtOrbit1, maxSpeedAtOrbit2);
+
+    String ans = idealVehicleOnOrbit.toString();
+    System.out.println(ans);
   }
 
   private void populateValues(String filepath) throws IOException {
@@ -39,11 +45,5 @@ public class TrafficApplication {
       maxSpeedAtOrbit1 = scanner.nextInt();
       maxSpeedAtOrbit2 = scanner.nextInt();
     }
-    VehicleInOrbit vehicleInOrbit = new VehicleInOrbitImpl();
-    IdealVehicleOnOrbit idealVehicleOnOrbit = vehicleInOrbit
-        .getBestVehicle(weather, maxSpeedAtOrbit1, maxSpeedAtOrbit2);
-
-    String ans = idealVehicleOnOrbit.toString();
-    System.out.println(ans);
   }
 }

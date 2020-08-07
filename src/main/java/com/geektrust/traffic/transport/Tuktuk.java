@@ -5,9 +5,9 @@ import lombok.Data;
 @Data
 public class Tuktuk implements Vehicle{
 
-  private String vehicleName;
-  private double maxSpeed;
-  private double timePerCrater;
+  private final String vehicleName;
+  private final double maxSpeed;
+  private final double timePerCrater;
 
   public Tuktuk() {
     vehicleName = "TUKTUK";

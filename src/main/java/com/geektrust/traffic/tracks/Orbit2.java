@@ -4,8 +4,8 @@ import com.geektrust.traffic.season.Weather;
 
 public class Orbit2 implements Orbit{
 
-  private String orbitName;
-  private double distanceFromDestination;
+  private final String orbitName;
+  private final double distanceFromDestination;
   private int noOfCraters;
   private double orbitSpeed;
 

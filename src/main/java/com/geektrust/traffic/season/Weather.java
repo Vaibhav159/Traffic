@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface Weather {
   List<Vehicle> getVehicleAllowed();
-  String getName();
+  String getWeatherName();
   int updateCraters(int noOfCraters);
 }

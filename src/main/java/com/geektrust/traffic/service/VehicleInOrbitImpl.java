@@ -14,8 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VehicleInOrbitImpl implements VehicleInOrbit {
-  private List<Weather> weathers = new ArrayList<>();
-  private List<Orbit> orbits = new ArrayList<>();
+  private final List<Weather> weathers = new ArrayList<>();
+  private final List<Orbit> orbits = new ArrayList<>();
   private Weather currentSeason;
 
   public VehicleInOrbitImpl() {
@@ -43,7 +43,7 @@ public class VehicleInOrbitImpl implements VehicleInOrbit {
 
   private void setCurrentWeather(String weather) {
     for(Weather season : weathers) {
-      if (weather.equals(season.getName())) {
+      if (weather.equals(season.getWeatherName())) {
         currentSeason = season;
         break;
       }

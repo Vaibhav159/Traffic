@@ -30,14 +30,14 @@ public class BestVehicle {
   private IdealVehicleOnOrbit getVehicleWithTimeTaken(Orbit orbit, Vehicle vehicle) {
     double time = findTimeTakenByVehicleInOrbit(orbit, vehicle);
 
-    IdealVehicleOnOrbit idealVehicleOnOrbit = IdealVehicleOnOrbit.builder()
+    IdealVehicleOnOrbit vehicleObj = IdealVehicleOnOrbit.builder()
         .orbitName(orbit.getOrbitName())
         .vehicleName(vehicle.getVehicleName())
         .timeTaken(time)
         .timeTakenToClearCrater(vehicle.getTimePerCrater())
         .build();
 
-    return idealVehicleOnOrbit;
+    return vehicleObj;
   }
 
   private double findTimeTakenByVehicleInOrbit(Orbit orbit, Vehicle vehicle) {

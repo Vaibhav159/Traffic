@@ -1,14 +1,10 @@
 package com.geektrust.traffic.transport;
 
-import lombok.Data;
-
-import java.util.Set;
-
 public class Bike implements Vehicle{
-  private String vehicleName;
-  private double maxSpeed;
+  private final String vehicleName;
+  private final double maxSpeed;
 
-  private double timePerCrater;
+  private final double timePerCrater;
 
   public Bike() {
     vehicleName = "BIKE";
@@ -30,7 +26,5 @@ public class Bike implements Vehicle{
   public double bestSpeed(double speedAllowed) {
     return Math.min(maxSpeed, speedAllowed);
   }
-
-
 
 }

@@ -9,12 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Sunny implements Weather{
-  private String name;
-  private int craterAffectedInPercentage;
-  private List<Vehicle> vehicleAllowed = new ArrayList<>();
+  private final String name;
+  private final int craterAffectedInPercentage;
+  private final List<Vehicle> vehicleAllowed = new ArrayList<>();
 
   @Override
-  public String getName() {
+  public String getWeatherName() {
     return name;
   }
 
@@ -33,7 +33,7 @@ public class Sunny implements Weather{
 
   @Override
   public int updateCraters(int noOfCraters) {
-    int changeInCraters = (int)(noOfCraters * craterAffectedInPercentage) / 100;
+    int changeInCraters = (noOfCraters * craterAffectedInPercentage) / 100;
     return noOfCraters - changeInCraters;
   }
 }
