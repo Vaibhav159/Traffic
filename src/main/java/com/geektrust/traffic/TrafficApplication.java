@@ -13,6 +13,11 @@ public class TrafficApplication {
   private String weather;
   private Integer maxSpeedAtOrbit1;
   private Integer maxSpeedAtOrbit2;
+  private final VehicleInOrbit vehicleInOrbit;
+
+  public TrafficApplication() {
+    vehicleInOrbit = new VehicleInOrbitImpl();
+  }
 
   public static void main(String[] args) {
     TrafficApplication trafficApplication = new TrafficApplication();
@@ -28,12 +33,10 @@ public class TrafficApplication {
 
   private void getResult(String filepath) throws IOException {
     populateValues(filepath);
-    VehicleInOrbit vehicleInOrbit = new VehicleInOrbitImpl();
     IdealVehicleOnOrbit idealVehicleOnOrbit = vehicleInOrbit
         .getBestVehicle(weather, maxSpeedAtOrbit1, maxSpeedAtOrbit2);
 
-    String ans = idealVehicleOnOrbit.toString();
-    System.out.println(ans);
+    System.out.println(idealVehicleOnOrbit.toString());
   }
 
   private void populateValues(String filepath) throws IOException {

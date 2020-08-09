@@ -2,34 +2,15 @@ package com.geektrust.traffic.season;
 
 import com.geektrust.traffic.transport.Bike;
 import com.geektrust.traffic.transport.Car;
-import com.geektrust.traffic.transport.Vehicle;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Windy implements Weather{
-  private final String name;
-  private final int craterAffectedInPercentage;
-  private final List<Vehicle> vehicleAllowed = new ArrayList<>();
-
-  public List<Vehicle> getVehicleAllowed() {
-    return vehicleAllowed;
-  }
-
-  @Override
-  public String getWeatherName() {
-    return name;
-  }
+public class Windy extends Weather{
 
   public Windy() {
-    name = "WINDY";
+    weatherType = "WINDY";
     craterAffectedInPercentage = 0;
     vehicleAllowed.add(new Car());
     vehicleAllowed.add(new Bike());
+    increaseInCrater = 0;
   }
 
-  @Override
-  public int updateCraters(int noOfCraters) {
-    return noOfCraters;
-  }
 }

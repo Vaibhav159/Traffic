@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.geektrust.traffic.TrafficApplicationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-08-07T11:42:39" hostname="vaibhav-PC" time="0.036">
+<testsuite name="com.geektrust.traffic.TrafficApplicationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-08-09T10:33:42" hostname="vaibhav-PC" time="0.038">
   <properties/>
-  <testcase name="testForInvalidFile()" classname="com.geektrust.traffic.TrafficApplicationTest" time="0.017"/>
-  <testcase name="testForRainy()" classname="com.geektrust.traffic.TrafficApplicationTest" time="0.009"/>
-  <testcase name="testForSunny()" classname="com.geektrust.traffic.TrafficApplicationTest" time="0.002"/>
-  <testcase name="testForWindy()" classname="com.geektrust.traffic.TrafficApplicationTest" time="0.002"/>
+  <testcase name="testForInvalidFile()" classname="com.geektrust.traffic.TrafficApplicationTest" time="0.019"/>
+  <testcase name="testForRainy()" classname="com.geektrust.traffic.TrafficApplicationTest" time="0.006"/>
+  <testcase name="testForSunny()" classname="com.geektrust.traffic.TrafficApplicationTest" time="0.003"/>
+  <testcase name="testForWindy()" classname="com.geektrust.traffic.TrafficApplicationTest" time="0.004"/>
   <testcase name="testForRainy1()" classname="com.geektrust.traffic.TrafficApplicationTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

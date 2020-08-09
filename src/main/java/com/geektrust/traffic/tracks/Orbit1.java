@@ -27,11 +27,6 @@ public class Orbit1 implements Orbit{
   }
 
   @Override
-  public void updateCraters(Weather weather) {
-    noOfCraters = weather.updateCraters(noOfCraters);
-  }
-
-  @Override
   public int getCraters() {
     return noOfCraters;
   }

@@ -1,7 +1,5 @@
 package com.geektrust.traffic.tracks;
 
-import com.geektrust.traffic.season.Weather;
-
 public class Orbit2 implements Orbit{
 
   private final String orbitName;
@@ -23,11 +21,6 @@ public class Orbit2 implements Orbit{
   @Override
   public double getDistanceFromDestination() {
     return distanceFromDestination;
-  }
-
-  @Override
-  public void updateCraters(Weather weather) {
-    noOfCraters = weather.updateCraters(noOfCraters);
   }
 
   @Override
