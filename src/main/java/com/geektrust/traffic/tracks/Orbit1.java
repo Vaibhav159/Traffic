@@ -1,12 +1,10 @@
 package com.geektrust.traffic.tracks;
 
-import com.geektrust.traffic.season.Weather;
-
 public class Orbit1 implements Orbit{
 
   private final String orbitName;
   private final double distanceFromDestination;
-  private int noOfCraters;
+  private final int noOfCraters;
 
   private double orbitSpeed;
 

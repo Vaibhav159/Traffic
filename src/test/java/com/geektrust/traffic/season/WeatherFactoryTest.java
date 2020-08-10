@@ -11,7 +11,6 @@ class WeatherFactoryTest {
   private WeatherFactory weatherFactory;
   private String weather;
   private Weather weatherReceived;
-  private Weather weatherExpected;
 
   @BeforeEach
   void setUp() {

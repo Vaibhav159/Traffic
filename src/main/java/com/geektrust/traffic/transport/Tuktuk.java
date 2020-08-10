@@ -1,8 +1,5 @@
 package com.geektrust.traffic.transport;
 
-import lombok.Data;
-
-@Data
 public class Tuktuk implements Vehicle{
 
   private final String vehicleName;

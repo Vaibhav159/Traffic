@@ -1,6 +1,6 @@
 package com.geektrust.traffic.transport;
 
-public class Bike implements Vehicle{
+public class Bike implements Vehicle {
   private final String vehicleName;
   private final double maxSpeed;
 

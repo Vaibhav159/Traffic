@@ -4,7 +4,7 @@ public class Orbit2 implements Orbit{
 
   private final String orbitName;
   private final double distanceFromDestination;
-  private int noOfCraters;
+  private final int noOfCraters;
   private double orbitSpeed;
 
   public Orbit2() {

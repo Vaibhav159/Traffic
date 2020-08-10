@@ -1,10 +1,5 @@
 package com.geektrust.traffic.transport;
 
-import lombok.Data;
-
-import java.util.Set;
-
-@Data
 public class Car implements Vehicle{
   private final String vehicleName;
   private final double maxSpeed;

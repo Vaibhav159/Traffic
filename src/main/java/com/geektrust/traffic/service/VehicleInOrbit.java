@@ -1,7 +1,7 @@
 package com.geektrust.traffic.service;
 
-import com.geektrust.traffic.model.IdealVehicleOnOrbit;
+import com.geektrust.traffic.model.IdealVehicleForOrbit;
 
 public interface VehicleInOrbit {
-  IdealVehicleOnOrbit getBestVehicle(String weather, int maxSpeedAtOrbit1, int maxSpeedAtOrbit2);
+  IdealVehicleForOrbit getBestVehicle(String weather, int maxSpeedAtOrbit1, int maxSpeedAtOrbit2);
 }
