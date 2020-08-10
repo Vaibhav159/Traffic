@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.geektrust.traffic.util.BestVehicleTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-08-10T10:18:23" hostname="vaibhav-PC" time="0.003">
+<testsuite name="com.geektrust.traffic.util.BestVehicleTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-08-10T12:29:46" hostname="vaibhav-PC" time="0.002">
   <properties/>
   <testcase name="requiredVehicleForTwoOrbitTest()" classname="com.geektrust.traffic.util.BestVehicleTest" time="0.0"/>
   <testcase name="requiredVehicleForOneOrbitTest()" classname="com.geektrust.traffic.util.BestVehicleTest" time="0.0"/>

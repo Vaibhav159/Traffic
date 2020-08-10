@@ -21,12 +21,12 @@ class BikeTest {
 
   @Test
   void bestSpeedForSlowOrbitTest() {
-    assertEquals(2, bike.bestSpeed(2));
+    assertEquals(2, bike.bestSpeedOfVehicle(2));
   }
 
   @Test
   void bestSpeedForFastOrbitTest() {
-    assertEquals(10, bike.bestSpeed(30));
+    assertEquals(10, bike.bestSpeedOfVehicle(30));
   }
 
 

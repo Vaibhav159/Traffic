@@ -1,11 +1,19 @@
 package com.geektrust.traffic.transport;
 
-public class Tuktuk implements Vehicle{
+/**
+ * The type Tuktuk.
+ * Tuktuk implementing Vehicle interface
+ */
+public class Tuktuk implements Vehicle {
 
   private final String vehicleName;
   private final double maxSpeed;
   private final double timePerCrater;
 
+  /**
+   * Instantiates a new Tuktuk.
+   * Setting the default value of Tuktuk.
+   */
   public Tuktuk() {
     vehicleName = "TUKTUK";
     maxSpeed = 12;
@@ -18,7 +26,8 @@ public class Tuktuk implements Vehicle{
   }
 
   @Override
-  public double bestSpeed(double speedAllowed) {
+  public double bestSpeedOfVehicle(double speedAllowed) {
+    // compares vehicle speed with speedAllowed in orbit
     return Math.min(maxSpeed, speedAllowed);
   }
 

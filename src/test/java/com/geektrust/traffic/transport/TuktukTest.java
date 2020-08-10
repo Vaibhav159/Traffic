@@ -21,12 +21,12 @@ class TuktukTest {
 
   @Test
   void bestSpeedForSlowOrbitTest() {
-    assertEquals(10, tuktuk.bestSpeed(10));
+    assertEquals(10, tuktuk.bestSpeedOfVehicle(10));
   }
 
   @Test
   void bestSpeedForFastOrbitTest() {
-    assertEquals(12, tuktuk.bestSpeed(30));
+    assertEquals(12, tuktuk.bestSpeedOfVehicle(30));
   }
 
 
